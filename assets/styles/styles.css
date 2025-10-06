@@ -1,0 +1,147 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a1a2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #fff;
+}
+
+.container {
+  background: #16213e;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px #3da5d933;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: #1a5fe6;
+  margin-top: 0;
+  font-size: 2.5rem;
+}
+
+.input-section {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+#task-input {
+  flex-grow: 1;
+  padding: 15px;
+  border: 1px solid #3d5a80;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #0f3460;
+  color: #f0f0f0;
+  transition: border-color 0.3s ease;
+}
+
+#task-input:focus {
+  outline: none;
+  border-color: #5885af;
+}
+
+#task-input::placeholder {
+  color: #aaa;
+}
+
+#add-button {
+  background-color: #3d5a80;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+#add-button:hover {
+  background-color: #5885af;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#task-list li {
+  background: #2a3c5a;
+  padding: 18px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+#task-list li span {
+  flex-grow: 1;
+  margin-left: 15px;
+  color: #f0f0f0;
+  word-wrap: break-word;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+}
+
+#task-list li span.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+#task-list li input[type="checkbox"] {
+  /* -webkit-appearance: none; */
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #5885af;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#task-list li input[type="checkbox"]:checked {
+  background-color: #3d5a80;
+  border-color: #3d5a80;
+}
+
+#task-list li input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.remove {
+  background-color: #e94560;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.remove:hover {
+  background-color: #d13a52;
+  transform: scale(1.1);
+}
